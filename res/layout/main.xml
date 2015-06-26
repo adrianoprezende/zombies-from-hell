@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget32"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/menu_background"
+    android:orientation="vertical"
+	>
+<ImageView 
+    android:id="@+id/textMenu_Zombie"
+    android:contentDescription="@string/zombies"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:src="@drawable/menu_textbg_zombies"
+	/>
+
+<ImageView
+    android:id="@+id/textMenu_FromHell"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:contentDescription="@string/from_hell"
+    android:src="@drawable/menu_textbg_fromhell" 
+	/>
+
+<TableLayout
+    android:id="@+id/menu_buttons_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_centerVertical="true" >
+
+    <Button
+        android:id="@+id/StartGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:background="@drawable/startgame_button" />
+
+    <Button
+        android:id="@+id/RankingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ranking_button" />
+
+    <Button
+        android:id="@+id/AchievementsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/achievements_button" />
+
+    <Button
+        android:id="@+id/ExitGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/exitgame_button" />
+</TableLayout>
+
+</RelativeLayout>
