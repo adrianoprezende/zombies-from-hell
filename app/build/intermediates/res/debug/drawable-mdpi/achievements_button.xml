@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<selector xmlns:android="http://schemas.android.com/apk/res/android"> 
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@drawable/trophies_highlighted" /> 
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/trophies_pressed" /> 
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/trophies_pressed" /> 
+    <item android:drawable="@drawable/trophies" /> 
+</selector>
+
+<!-- From: file:/C:/Users/adrianopr/StudioProjects/ZombiesFromHell/app/src/main/res/drawable-mdpi/achievements_button.xml -->

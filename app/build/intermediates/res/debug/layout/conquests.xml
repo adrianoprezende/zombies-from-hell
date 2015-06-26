@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ranking_background"
+    android:orientation="vertical" >
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ConquestText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:paddingTop="190dp"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+        
+</LinearLayout><!-- From: file:/C:/Users/adrianopr/StudioProjects/ZombiesFromHell/app/src/main/res/layout/conquests.xml -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_GameOver"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gameover"
+    android:orientation="vertical"
+	>
+<TableLayout 
+    android:id="@+id/tabela_layout_GameOver"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    >
+    
+</TableLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/adrianopr/StudioProjects/ZombiesFromHell/app/src/main/res/layout/gameover.xml -->

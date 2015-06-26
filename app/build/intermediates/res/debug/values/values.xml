@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/adrianopr/StudioProjects/ZombiesFromHell/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Zombies From Hell</string>
+    <string name="from_hell">from Hell</string>
+    <string name="medal_of_honor">Medal of Honor</string>
+    <string name="monster_bust">Monster Bust</string>
+    <string name="mummy_head">Mummy Head</string>
+    <string name="necklace_of_ears">Necklace of Ears</string>
+    <string name="score">SCORES</string>
+    <string name="vampire_coffin">Vampire Coffin</string>
+    <string name="werewolf_claws">Werewolf Claws</string>
+    <string name="zombies">Zombies</string>
+</resources>
