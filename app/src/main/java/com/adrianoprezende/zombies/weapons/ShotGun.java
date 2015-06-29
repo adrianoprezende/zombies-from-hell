@@ -72,6 +72,28 @@ public class ShotGun extends Gun {
 		//do nothing
 	}
 
+	/**
+	 * Handles all touches on screen from user.
+	 * @param eventX
+	 * @param eventY
+	 */
+	@Override
+	public void handleActionDown(int eventX, int eventY) {
+		if(this.isActive()) {
+
+			if(getCurrentFrame() < getFrameVector().length) {
+				if(eventX >= (getX() - getFrameVector()[0].getWidth() / 2) && eventX <= (getX() + getFrameVector()[0].getWidth() / 2)) {
+					if(eventY >= (getY() - getFrameVector()[0].getHeight() / 2) && eventY <= (getY() + getFrameVector()[0].getHeight() / 2)) {
+						setTouched(true);
+					} else setTouched(false);
+				} else setTouched(false);
+			}
+
+			screenTouched();
+		}
+
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * @see com.adrianoprezende.zombies.core.Gun#screenTouched()
@@ -98,19 +120,6 @@ public class ShotGun extends Gun {
 		}
 
 			
-		
-	}
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.adrianoprezende.zombies.core.InteractiveSpriteObject#handleActionDown(int, int)
-	 */
-	@Override
-	public void handleActionDown(int eventX, int eventY) {			
-		if(this.isActive()) {
-			super.handleActionDown(eventX, eventY);
-			screenTouched();
-		}
 		
 	}
 	

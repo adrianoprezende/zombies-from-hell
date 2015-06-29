@@ -127,6 +127,9 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	 */
 	public MainGamePanel(Context context) {
 		super(context);
+
+		timerBeholder = new Timer(true);
+
 		 // adding the callback (this) to the surface holder to intercept events
 		getHolder().addCallback(this);
 		// create the game loop thread
@@ -517,8 +520,11 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	 * Cancel, purge and renew the timerBeholder thread
 	 */
 	private void renewTimerBeholder() {
-		timerBeholder.cancel();
-		timerBeholder.purge();
+		if(timerBeholder != null) {
+			timerBeholder.cancel();
+			timerBeholder.purge();
+		}
+
 		timerBeholder = new Timer(true);
 	}
 	
