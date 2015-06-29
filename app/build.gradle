@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.powerup.zombie.main"
+        applicationId "com.adrianoprezende.zombies.main"
         minSdkVersion 3
         targetSdkVersion 9
     }

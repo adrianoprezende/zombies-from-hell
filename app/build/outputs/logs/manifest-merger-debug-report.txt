@@ -45,7 +45,7 @@ ADDED from AndroidManifest.xml:17:5
 		ADDED from AndroidManifest.xml:19:9
 	android:icon
 		ADDED from AndroidManifest.xml:18:9
-activity#com.powerup.zombie.main.MenuView
+activity#com.adrianoprezende.zombies.main.MenuView
 ADDED from AndroidManifest.xml:20:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:22:13
@@ -71,7 +71,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:30:17
 	android:name
 		ADDED from AndroidManifest.xml:30:27
-activity#com.powerup.zombie.main.InstructionsView
+activity#com.adrianoprezende.zombies.main.InstructionsView
 ADDED from AndroidManifest.xml:33:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:35:13
@@ -85,7 +85,7 @@ ADDED from AndroidManifest.xml:33:9
 		ADDED from AndroidManifest.xml:39:13
 	android:name
 		ADDED from AndroidManifest.xml:34:13
-activity#com.powerup.zombie.main.StartGameView
+activity#com.adrianoprezende.zombies.main.StartGameView
 ADDED from AndroidManifest.xml:41:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:43:13
@@ -101,7 +101,7 @@ ADDED from AndroidManifest.xml:41:9
 		ADDED from AndroidManifest.xml:44:13
 	android:name
 		ADDED from AndroidManifest.xml:42:13
-activity#com.powerup.zombie.main.EndGameView
+activity#com.adrianoprezende.zombies.main.EndGameView
 ADDED from AndroidManifest.xml:50:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:52:13
@@ -115,7 +115,7 @@ ADDED from AndroidManifest.xml:50:9
 		ADDED from AndroidManifest.xml:56:13
 	android:name
 		ADDED from AndroidManifest.xml:51:13
-activity#com.powerup.zombie.main.ConquestsView
+activity#com.adrianoprezende.zombies.main.ConquestsView
 ADDED from AndroidManifest.xml:58:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:60:13
@@ -129,7 +129,7 @@ ADDED from AndroidManifest.xml:58:9
 		ADDED from AndroidManifest.xml:64:13
 	android:name
 		ADDED from AndroidManifest.xml:59:13
-activity#com.powerup.zombie.main.RankingView
+activity#com.adrianoprezende.zombies.main.RankingView
 ADDED from AndroidManifest.xml:66:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:68:13
@@ -143,13 +143,13 @@ ADDED from AndroidManifest.xml:66:9
 		ADDED from AndroidManifest.xml:72:13
 	android:name
 		ADDED from AndroidManifest.xml:67:13
-provider#com.powerup.zombie.providers.RankingProvider
+provider#com.adrianoprezende.zombies.providers.RankingProvider
 ADDED from AndroidManifest.xml:75:9
 	android:authorities
 		ADDED from AndroidManifest.xml:77:13
 	android:name
 		ADDED from AndroidManifest.xml:76:13
-activity#com.powerup.zombie.main.AchievementsView
+activity#com.adrianoprezende.zombies.main.AchievementsView
 ADDED from AndroidManifest.xml:80:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:82:13

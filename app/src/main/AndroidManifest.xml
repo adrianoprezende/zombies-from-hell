@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.powerup.zombie.main"
+    package="com.adrianoprezende.zombies.main"
     android:versionCode="1"
     android:versionName="1.0" android:installLocation="auto">
 
@@ -73,8 +73,8 @@
         />
         
         <provider
-            android:name="com.powerup.zombie.providers.RankingProvider"
-            android:authorities="com.powerup.zombie"
+            android:name="com.adrianoprezende.zombies.providers.RankingProvider"
+            android:authorities="com.adrianoprezende.zombies"
         />
         
         <activity
