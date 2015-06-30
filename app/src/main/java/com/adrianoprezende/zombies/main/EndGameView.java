@@ -3,14 +3,19 @@ package com.adrianoprezende.zombies.main;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 /**
  * EndGameView class.
  * @author Adriano Pereira Rezende
  */
 public class EndGameView extends Activity {
-	
+
+	InterstitialAd mInterstitialAd;
+
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -20,8 +25,39 @@ public class EndGameView extends Activity {
     	
     	SoundManager.getInstance();
  	   	SoundManager.playSound(SoundManager.GAMEOVER_SHOUT_FX);
-    	
-    	
+
+		mInterstitialAd = new InterstitialAd(this);
+		mInterstitialAd.setAdUnitId(getString(R.string.banner_ad_unit_id));
+		requestNewInterstitial();
+
+		mInterstitialAd.setAdListener(new AdListener() {
+
+			@Override
+			public void onAdLoaded() {
+				if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
+					mInterstitialAd.show();
+				}
+			}
+
+			@Override
+			public void onAdFailedToLoad(int errorCode) {
+				finishViewAndCallConquestsView();
+			}
+
+			@Override
+			public void onAdClosed() {
+				finishViewAndCallConquestsView();
+			}
+		});
+
+		/*
+		if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
+			mInterstitialAd.show();
+		} else {
+			Toast.makeText(this, "****Ad did not load", Toast.LENGTH_SHORT).show();
+		}
+		*/
+
 //    	Handler handler = null;
 //	    handler = new Handler(); 
 //	    handler.post(new Runnable(){ 
@@ -30,7 +66,8 @@ public class EndGameView extends Activity {
 //	       }
 //	    });
 
-    	new CountDownTimer(3000, 1000) {
+		/*
+    	new CountDownTimer(7000, 1000) {
 			
 			@Override
 			public void onTick(long millisUntilFinished) {
@@ -44,10 +81,26 @@ public class EndGameView extends Activity {
 				finish();
 			}
 		}.start();
-        
+        */
     	
 	}
-    
+
+	private void finishViewAndCallConquestsView() {
+		Intent conquestsViewIntent = new Intent(EndGameView.this, ConquestsView.class);
+		setResult(1,conquestsViewIntent);
+		finish();
+	}
+
+	private void requestNewInterstitial() {
+		//TelephonyManager tm = (TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
+		//String deviceId = tm.getDeviceId();
+		AdRequest adRequest = new AdRequest.Builder()
+				.addTestDevice("01546C0E0900800A")
+				.build();
+
+		mInterstitialAd.loadAd(adRequest);
+	}
+
     
     @Override
     protected void onPause() {
@@ -58,7 +111,7 @@ public class EndGameView extends Activity {
     
 //  public void onResume() {
 //	super.onResume();
-//    
+//
 //}
     
     @Override
@@ -70,28 +123,33 @@ public class EndGameView extends Activity {
     public void onRestart() {
     	super.onRestart();
     }
-    
+
     @Override
     public void onDestroy() {
     	super.onDestroy();
     }
-    
+
     @Override
     public void onBackPressed() {
     	Intent conquestsViewIntent = new Intent(EndGameView.this, ConquestsView.class);
-		setResult(1,conquestsViewIntent);
+		setResult(1, conquestsViewIntent);
 		finish();
     }
-    
-//    public boolean onTouchEvent(MotionEvent event) {
-//    	if(event.getAction() == MotionEvent.ACTION_DOWN) {
-//    		Intent rankingGameIntent = new Intent(EndGameView.this, RankingView.class);
-//    		setResult(1,rankingGameIntent);
-//    		finish();
-//    	}
-//    	
-//    	return false;
-//    }
+
+	/*
+    public boolean onTouchEvent(MotionEvent event) {
+    	if(event.getAction() == MotionEvent.ACTION_DOWN) {
+			if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
+				mInterstitialAd.show();
+			} else {
+				finishViewAndCallConquestsView();
+			}
+
+    	}
+
+    	return false;
+    }
+    */
     
    
 }

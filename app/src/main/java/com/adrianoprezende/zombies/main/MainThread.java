@@ -2,6 +2,7 @@ package com.adrianoprezende.zombies.main;
 
 import java.text.DecimalFormat;
 
+import android.annotation.SuppressLint;
 import android.graphics.Canvas;
 import android.util.Log;
 import android.view.SurfaceHolder;
@@ -62,6 +63,7 @@ public class MainThread extends Thread {
 		running = run;
 	}
 	
+	@SuppressLint("WrongCall")
 	public void run() {
 		Log.d(TAG, "Starting game loop");
 		// initialise timing elements for stat gathering

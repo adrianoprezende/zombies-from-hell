@@ -163,7 +163,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 		debug.setColor(Color.WHITE);
 		
 		sensorManager = (SensorManager)this.getContext().getSystemService(Context.SENSOR_SERVICE);
-		
+
 
 		/*	More sensor speeds (taken from api docs)
 		    SENSOR_DELAY_FASTEST get sensor data as fast as possible
@@ -363,7 +363,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 	/**
 	 * Animates all In-Game Objects
 	 */
-	private void animate() {
+	private void animateCharacters() {
 		
 		people.animate();
 		
@@ -400,7 +400,7 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 			showPeople();
 			killZombie();
 			showItem();
-			animate();
+			animateCharacters();
 			isAchievementUnlocked(player);
 			chooseWeapon(player);
 		} else if(getMainMode() == PAUSE) {

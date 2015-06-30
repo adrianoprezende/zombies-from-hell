@@ -133,8 +133,10 @@ public class MenuView extends Activity {
 				
 				@Override
 				public void onClick(View v) {
-			    	//finish();
-					System.exit(RESULT_OK);
+			    	finish();
+					//SoundManager.stopMusic();
+					//SoundManager.cleanup();
+					//System.exit(RESULT_OK);
 				}
 			});
 	    	
