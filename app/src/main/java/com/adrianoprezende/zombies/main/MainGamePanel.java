@@ -31,6 +31,7 @@ import android.view.SurfaceView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.adrianoprezende.zombies.advertising.AdManager;
 import com.adrianoprezende.zombies.characters.Frankeinstein;
 import com.adrianoprezende.zombies.characters.Humans;
 import com.adrianoprezende.zombies.characters.Mummy;
@@ -164,6 +165,8 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 		
 		sensorManager = (SensorManager)this.getContext().getSystemService(Context.SENSOR_SERVICE);
 
+
+		AdManager.getInstance().createAd(context);
 
 		/*	More sensor speeds (taken from api docs)
 		    SENSOR_DELAY_FASTEST get sensor data as fast as possible

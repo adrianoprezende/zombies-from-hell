@@ -3,7 +3,11 @@ package com.adrianoprezende.zombies.main;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.view.MotionEvent;
+import android.widget.Toast;
 
+import com.adrianoprezende.zombies.advertising.AdManager;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -26,6 +30,15 @@ public class EndGameView extends Activity {
     	SoundManager.getInstance();
  	   	SoundManager.playSound(SoundManager.GAMEOVER_SHOUT_FX);
 
+		mInterstitialAd = AdManager.getInstance().getAd();
+
+		if(mInterstitialAd != null) {
+			if (mInterstitialAd.isLoaded()) {
+				mInterstitialAd.show();
+			}
+		}
+
+		/*
 		mInterstitialAd = new InterstitialAd(this);
 		mInterstitialAd.setAdUnitId(getString(R.string.banner_ad_unit_id));
 		requestNewInterstitial();
@@ -91,6 +104,7 @@ public class EndGameView extends Activity {
 		finish();
 	}
 
+	/*
 	private void requestNewInterstitial() {
 		//TelephonyManager tm = (TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
 		//String deviceId = tm.getDeviceId();
@@ -100,7 +114,7 @@ public class EndGameView extends Activity {
 
 		mInterstitialAd.loadAd(adRequest);
 	}
-
+	*/
     
     @Override
     protected void onPause() {
@@ -131,10 +145,13 @@ public class EndGameView extends Activity {
 
     @Override
     public void onBackPressed() {
-    	Intent conquestsViewIntent = new Intent(EndGameView.this, ConquestsView.class);
-		setResult(1, conquestsViewIntent);
-		finish();
+		finishViewAndCallConquestsView();
     }
+
+	public boolean onTouchEvent(MotionEvent event) {
+		finishViewAndCallConquestsView();
+		return true;
+	}
 
 	/*
     public boolean onTouchEvent(MotionEvent event) {

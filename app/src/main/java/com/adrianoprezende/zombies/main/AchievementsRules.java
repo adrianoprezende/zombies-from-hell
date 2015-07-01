@@ -14,8 +14,8 @@ public class AchievementsRules {
 	public static final int PLAY_TIME = 1200;
 	
 	public static final int COMBO_0 = 0;
-	public static final int COMBO_1 = 10;
-	public static final int COMBO_2 = 20;
+	public static final int COMBO_1 = 1;
+	public static final int COMBO_2 = 2;
 	public static final int COMBO_3 = 40;
 	public static final int COMBO_MULTIPLIER_1 = 1;
 	public static final int COMBO_MULTIPLIER_2 = 2;

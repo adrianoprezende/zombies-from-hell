@@ -81,13 +81,11 @@ public class ShotGun extends Gun {
 	public void handleActionDown(int eventX, int eventY) {
 		if(this.isActive()) {
 
-			if(getCurrentFrame() < getFrameVector().length) {
-				if(eventX >= (getX() - getFrameVector()[0].getWidth() / 2) && eventX <= (getX() + getFrameVector()[0].getWidth() / 2)) {
-					if(eventY >= (getY() - getFrameVector()[0].getHeight() / 2) && eventY <= (getY() + getFrameVector()[0].getHeight() / 2)) {
-						setTouched(true);
-					} else setTouched(false);
+			if(eventX >= (getX() - getFrameVector()[0].getWidth() / 2) && eventX <= (getX() + getFrameVector()[0].getWidth() / 2)) {
+				if(eventY >= (getY() - getFrameVector()[0].getHeight() / 2) && eventY <= (getY() + getFrameVector()[0].getHeight() / 2)) {
+					setTouched(true);
 				} else setTouched(false);
-			}
+			} else setTouched(false);
 
 			screenTouched();
 		}
