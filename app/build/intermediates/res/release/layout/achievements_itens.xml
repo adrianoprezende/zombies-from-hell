@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/achievements_itens"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="#FF0000"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+/>
+<!-- From: file:/C:/Users/adrianopr/Documents/PersonalProjects/zombies-from-hell/trunk/ZombiesFromHell/app/src/main/res/layout/achievements_itens.xml -->

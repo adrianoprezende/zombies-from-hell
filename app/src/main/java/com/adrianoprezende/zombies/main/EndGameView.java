@@ -20,6 +20,8 @@ public class EndGameView extends Activity {
 
 	InterstitialAd mInterstitialAd;
 
+	private boolean timerLock = false;
+
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,8 +81,8 @@ public class EndGameView extends Activity {
 //	       }
 //	    });
 
-		/*
-    	new CountDownTimer(7000, 1000) {
+
+    	new CountDownTimer(2000, 1000) {
 			
 			@Override
 			public void onTick(long millisUntilFinished) {
@@ -89,19 +91,19 @@ public class EndGameView extends Activity {
 			
 			@Override
 			public void onFinish() {
-				Intent conquestsViewIntent = new Intent(EndGameView.this, ConquestsView.class);
-				setResult(1,conquestsViewIntent);
-				finish();
+				timerLock = true;
 			}
 		}.start();
-        */
+
     	
 	}
 
 	private void finishViewAndCallConquestsView() {
-		Intent conquestsViewIntent = new Intent(EndGameView.this, ConquestsView.class);
-		setResult(1,conquestsViewIntent);
-		finish();
+		if(timerLock) {
+			Intent conquestsViewIntent = new Intent(EndGameView.this, ConquestsView.class);
+			setResult(1, conquestsViewIntent);
+			finish();
+		}
 	}
 
 	/*

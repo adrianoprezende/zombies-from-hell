@@ -32,9 +32,7 @@ public class AdManager {
         mInterstitialAd = new InterstitialAd(context);
         mInterstitialAd.setAdUnitId(context.getString(R.string.banner_ad_unit_id));
 
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice(TEST_DEVICE_ID).build();
+        AdRequest adRequest = new AdRequest.Builder().build();
 
         // Load the interstitial ad.
         mInterstitialAd.loadAd(adRequest);

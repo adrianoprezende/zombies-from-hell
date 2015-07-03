@@ -341,6 +341,8 @@ public class MainGamePanel extends SurfaceView implements SurfaceHolder.Callback
 					gunList.get(currentGun).reload();
 				}
 				gunList.get(currentGun).handleActionDown((int)event.getX(), (int)event.getY());
+
+				//Handles shotgun shot delay.
 				if(currentGun == SHOTGUN) {
 					touchLocked = true;
 					

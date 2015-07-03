@@ -30,6 +30,7 @@ public class ShotGun extends Gun {
 	private Bitmap frame4;
 	private Bitmap frame5;
 	private Bitmap frame6;
+	private Bitmap frame7;
 	
 	// Default Constructor
 	public ShotGun(Resources res) {
@@ -44,8 +45,9 @@ public class ShotGun extends Gun {
 		frame4 = BitmapFactory.decodeResource(res, R.drawable.shotgun_shells3);
 		frame5 = BitmapFactory.decodeResource(res, R.drawable.shotgun_shells4);
 		frame6 = BitmapFactory.decodeResource(res, R.drawable.shotgun_shells5);
+		frame7 = BitmapFactory.decodeResource(res, R.drawable.shotgun_shells6);
 		
-		setFrameVector(new Bitmap[]{frame1, frame2, frame3, frame4, frame5, frame6});
+		setFrameVector(new Bitmap[]{frame1, frame2, frame3, frame4, frame5, frame6, frame7});
 	}
 	
 	/*
@@ -103,7 +105,7 @@ public class ShotGun extends Gun {
 			reload();
 		} else {
 
-			if(getCurrentFrame() < getFrameVector().length) {
+			if(getCurrentFrame() < getFrameVector().length - 1) {
 				incrementCurrentFrame();
 			}
 

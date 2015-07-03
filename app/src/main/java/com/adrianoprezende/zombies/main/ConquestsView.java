@@ -85,7 +85,7 @@ public class ConquestsView extends Activity {
       					+innocent+" - INNOCENT KILLS\n\n"
       					+time+" SECONDS\n"+
       					"TOTAL SCORE: "+total+"\n"+
-      					"RANK: "+position+"¼\n\n"+
+      					"RANK: "+position+"\n\n"+
 						"CLICK TO LOOK THE OVERALL SCORE!";
       	
         TextView textView = (TextView)findViewById(R.id.ConquestText);
