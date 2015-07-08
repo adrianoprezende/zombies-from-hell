@@ -14,7 +14,7 @@ ADDED from AndroidManifest.xml:2:1
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
 	android:installLocation
-		ADDED from AndroidManifest.xml:5:31
+		ADDED from AndroidManifest.xml:5:29
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
